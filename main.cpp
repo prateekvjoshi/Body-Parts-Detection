@@ -66,6 +66,8 @@ int main( int argc, const char** argv )
         if( (char)c == 27 ) { break; }
     }
     
+    capture.release();
+    
     return 0;
 }
 
