@@ -22,8 +22,6 @@ String upperbody_cascade_name = "CascadeFiles/haarcascade_mcs_upperbody.xml";
 String lowerbody_cascade_name = "CascadeFiles/haarcascade_lowerbody.xml";
 String fullbody_cascade_name = "CascadeFiles/haarcascade_fullbody.xml";
 
-Point faceCenterPoint; // center point of the face in the given frame
-
 // Face detection using Haar-like features
 void detectFace( Mat frame )
 {
