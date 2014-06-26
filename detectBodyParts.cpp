@@ -218,7 +218,11 @@ void detectUpperBody( Mat frame )
     upperbody_cascade.detectMultiScale( frame_gray, upperbody, 1.1, 2, 0|CV_HAAR_SCALE_IMAGE, Size(100, 100) );
     
     for( size_t i = 0; i < upperbody.size(); i++ )
-        rectangle(frame, upperbody[i], Scalar(255,255,255), 4, 8);
+    {
+        Rect temp = upperbody[i];
+        temp.y += 100;
+        rectangle(frame, temp, Scalar(255,255,255), 4, 8);
+    }
     
     imshow( "Upper Body Detection", frame );
 }
